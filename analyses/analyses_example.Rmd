@@ -2,7 +2,7 @@
 title: "analyses example"
 author: "JP"
 date: "June 5, 2017"
-output: html_document
+output: github_document
 ---
 
 ```{r}

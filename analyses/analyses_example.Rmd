@@ -12,8 +12,6 @@ library(tidyverse)
 file_mtcars <- "../data/mtcars_data.rds"
 ```
 
-Why do I need to back up (e.g., "../" if my getwd() indicates that I am already in the proper folder)???
-
 ```{r}
 ds <- read_rds(file_mtcars)
 ```
@@ -22,5 +20,12 @@ ds <- read_rds(file_mtcars)
 ds %>% 
   ggplot(aes(x = wt, y = mpg)) +
   geom_boxplot(aes(group = cut_width(wt, 1)), varwidth = TRUE)
+```
+
+```{r}
+ds %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_point(aes(color = as.factor(cyl))) + 
+  geom_smooth(method = "lm")
 ```
 

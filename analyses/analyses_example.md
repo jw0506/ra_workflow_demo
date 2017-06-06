@@ -16,3 +16,12 @@ ds %>%
 ```
 
 ![](analyses_example_files/figure-markdown_github/unnamed-chunk-3-1.png)
+
+``` r
+ds %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_point(aes(color = as.factor(cyl))) + 
+  geom_smooth(method = "lm")
+```
+
+![](analyses_example_files/figure-markdown_github/unnamed-chunk-4-1.png)

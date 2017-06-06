@@ -5,7 +5,7 @@ date: "June 5, 2017"
 output: github_document
 ---
 
-```{r}
+```{r include=FALSE, echo=TRUE}
 library(tidyverse)
 
 # data files

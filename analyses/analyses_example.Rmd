@@ -24,3 +24,10 @@ ds %>%
   geom_boxplot(aes(group = cut_width(wt, 1)), varwidth = TRUE)
 ```
 
+```{r}
+ds %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_point(aes(color = as.factor(cyl))) + 
+  geom_smooth(method = "lm")
+```
+
